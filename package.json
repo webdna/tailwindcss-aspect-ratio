@@ -1,0 +1,28 @@
+{
+  "name": "tailwindcss-aspect-ratio",
+  "version": "1.0.0",
+  "description": "Aspect ratio plugin for tailwindcss framework",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/webdna/tailwindcss-aspect-ratio.git"
+  },
+  "keywords": [
+    "tailwind",
+    "tailwindcss",
+    "plugin",
+    "tailwindcss-plugin"
+  ],
+  "author": "webdna",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/webdna/tailwindcss-aspect-ratio/issues"
+  },
+  "homepage": "https://github.com/webdna/tailwindcss-aspect-ratio#readme",
+  "devDependencies": {
+    "lodash": "^4.17.5"
+  }
+}
