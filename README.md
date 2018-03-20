@@ -26,7 +26,7 @@ require('tailwindcss-aspect-ratio')({
 
 This configuration would create the following classes:
 
-```css
+```
 .aspect-ratio-square { padding-top: 100%; }
 .aspect-ratio-16/9 { padding-top: 56.25%; }
 .aspect-ratio-4/3 { padding-top: 75%; }
