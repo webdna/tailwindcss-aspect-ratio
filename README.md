@@ -54,6 +54,8 @@ require('tailwindcss-aspect-ratio')({
 Using the above should mean your plugins config looks something like this:
 
 ```js
+// example plugins section of tailwind.js config file
+
 plugins: [
   require('tailwindcss/plugins/container')({
     //center: true,
