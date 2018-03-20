@@ -37,6 +37,20 @@ The plugins accepts an object where the key is the suffix of the class name and 
 
 In the example above you can see that the key does not have to replicate the values, so if you prefer "nice names" you could have some like `'cinema': [21, 9]` or `'letterbox': [16,9]`.
 
+As per the [tailwind plugin docs](https://tailwindcss.com/docs/plugins/) you are able to pass variants (repsonsive, hover etc) as a parameter.
+
+```js
+require('tailwindcss-aspect-ratio')({
+  ratios: {
+    'square': [1, 1],
+    '16/9': [16, 9],
+    '4/3': [4, 3],
+    '21/9': [21, 9],
+  },
+  variants: ['reponsive', 'hover'],
+})
+```
+
 Using the above should mean your plugins config looks something like this:
 
 ```js
