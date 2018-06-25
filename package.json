@@ -1,6 +1,6 @@
 {
   "name": "tailwindcss-aspect-ratio",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Aspect ratio plugin for tailwindcss framework",
   "main": "index.js",
   "scripts": {
