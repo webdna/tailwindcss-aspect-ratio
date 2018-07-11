@@ -33,7 +33,7 @@ This configuration would create the following classes:
 .aspect-ratio-21/9 { padding-top: 42.86%; }
 ```
 
-The plugins accepts an object where the key is the suffix of the class name and the the value is an array of width and height `[{width}, {height}]`.
+The plugins accepts an object where the key is the suffix of the class name and the value is an array of width and height `[{width}, {height}]`.
 
 In the example above you can see that the key does not have to replicate the values, so if you prefer "nice names" you could have some like `'cinema': [21, 9]` or `'letterbox': [16,9]`.
 
