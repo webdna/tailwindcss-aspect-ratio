@@ -23,6 +23,6 @@
   },
   "homepage": "https://github.com/webdna/tailwindcss-aspect-ratio#readme",
   "devDependencies": {
-    "lodash": "^4.17.5"
+    "lodash": "^4.17.11"
   }
 }
