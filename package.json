@@ -22,7 +22,8 @@
     "url": "https://github.com/webdna/tailwindcss-aspect-ratio/issues"
   },
   "homepage": "https://github.com/webdna/tailwindcss-aspect-ratio#readme",
-  "devDependencies": {
+  "devDependencies": {},
+  "dependencies": {
     "lodash": "^4.17.11"
   }
 }
