@@ -1,13 +1,22 @@
 const _ = require('lodash');
 
-module.exports = function({ ratios, variants }) {
-  return function({ addUtilities, e }) {
-    const utilities = _.map(ratios, ([width, height], name) => ({
-      [`.${e(`aspect-ratio-${name}`)}`]: {
-        paddingTop: `${((Math.round(height) / Math.round(width)) * 100).toFixed(2)}%`
-      }
-    }))
+module.exports = function() {
+  return ({ config, e, addUtilities, variants }) => {
+    const defaultTheme = {};
+    const defaultVariants = ['responsive'];
 
-    addUtilities(utilities, variants)
-  }
-}
+    const aspectRatioUtilities = _.fromPairs(
+      _.map(config('theme.aspectRatio', defaultTheme), (value, modifier) => {
+        const aspectRatio = _.isArray(value) ? value[0] / value[1] : value;
+        return [
+          `.${e(`aspect-ratio-${modifier}`)}`,
+          {
+            paddingBottom: `${1 / aspectRatio * 100}%`,
+          },
+        ];
+      })
+    );
+
+    addUtilities(aspectRatioUtilities, variants('aspectRatio', defaultVariants));
+  };
+};
