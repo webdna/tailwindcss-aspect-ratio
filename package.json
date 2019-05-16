@@ -23,7 +23,7 @@
     "jest": "^24.8.0",
     "jest-matcher-css": "^1.0.3",
     "postcss": "^7.0.16",
-    "tailwindcss": "^1.0.0"
+    "tailwindcss": "^1.0.1"
   },
   "dependencies": {
     "lodash": "^4.17.11"
