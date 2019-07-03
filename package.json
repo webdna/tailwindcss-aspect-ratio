@@ -1,11 +1,7 @@
 {
   "name": "tailwindcss-aspect-ratio",
   "version": "1.0.3",
-  "description": "Aspect ratio plugin for tailwindcss framework",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "description": "Tailwind CSS plugin to generate aspect ratio utilities",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/webdna/tailwindcss-aspect-ratio.git"
@@ -18,11 +14,17 @@
   ],
   "author": "webdna",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/webdna/tailwindcss-aspect-ratio/issues"
-  },
+  "bugs": "https://github.com/webdna/tailwindcss-aspect-ratio/issues",
   "homepage": "https://github.com/webdna/tailwindcss-aspect-ratio#readme",
-  "devDependencies": {},
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^24.8.0",
+    "jest-matcher-css": "^1.0.3",
+    "postcss": "^7.0.16",
+    "tailwindcss": "^1.0.1"
+  },
   "dependencies": {
     "lodash": "^4.17.11"
   }

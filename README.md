@@ -11,20 +11,29 @@ npm install --save-dev tailwindcss-aspect-ratio
 
 ## Usage
 
-The aspect ratio plugin exposes options for you to use. Here is the example for adding it to your project plugins
+This plugin uses the `aspectRatio` key in your Tailwind config’s `theme` and `variants` objects to generate aspect ratio utilities. Here is an example:
 
 ```js
-require('tailwindcss-aspect-ratio')({
-  ratios: {
-    'square': [1, 1],
-    '16/9': [16, 9],
-    '4/3': [4, 3],
-    '21/9': [21, 9],
-  }
-})
+// tailwind.config.js
+{
+  theme: {
+    aspectRatio: { // defaults to {}
+      'square': [1, 1],
+      '16/9': [16, 9],
+      '4/3': [4, 3],
+      '21/9': [21, 9],
+    },
+  },
+  variants: {
+    aspectRatio: ['responsive'], // defaults to ['responsive']
+  },
+  plugins: [
+    require('tailwindcss-aspect-ratio')(),
+  ],
+}
 ```
 
-This configuration would create the following classes:
+This configuration would create the following classes, as well as their responsive variants:
 
 ```css
 .aspect-ratio-square { padding-top: 100%; }
@@ -33,41 +42,6 @@ This configuration would create the following classes:
 .aspect-ratio-21/9 { padding-top: 42.86%; }
 ```
 
-The plugin accepts an object where the key is the suffix of the class name and the value is an array of width and height `[{width}, {height}]`.
+The `aspectRatio` theme is an object where the key is the suffix of the class name and the value is an array of width and height `[{width}, {height}]`.
 
 In the example above you can see that the key does not have to replicate the values, so if you prefer "nice names" you could have some like `'cinema': [21, 9]` or `'letterbox': [16,9]`.
-
-As per the [tailwind plugin docs](https://tailwindcss.com/docs/plugins/) you are able to pass variants (responsive, hover, etc.) as a parameter.
-
-```js
-require('tailwindcss-aspect-ratio')({
-  ratios: {
-    'square': [1, 1],
-    '16/9': [16, 9],
-    '4/3': [4, 3],
-    '21/9': [21, 9],
-  },
-  variants: ['responsive', 'hover'],
-})
-```
-
-Using the above should mean your plugins config looks something like this:
-
-```js
-// example plugins section of tailwind.js config file
-
-plugins: [
-  require('tailwindcss/plugins/container')({
-    //center: true,
-    // padding: '1rem',
-  }),
-  require('tailwindcss-aspect-ratio')({
-    ratios: {
-      'square': [1, 1],
-      '16/9': [16, 9],
-      '4/3': [4, 3],
-      '21/9': [21, 9],
-    }
-  }),
-],
-```
