@@ -2,7 +2,6 @@ const _ = require('lodash');
 const cssMatcher = require('jest-matcher-css');
 const postcss = require('postcss');
 const tailwindcss = require('tailwindcss');
-const defaultConfig = require('tailwindcss/defaultConfig');
 const aspectRatioPlugin = require('./index.js');
 
 const generatePluginCss = (config) => {
@@ -16,7 +15,7 @@ const generatePluginCss = (config) => {
         },
         corePlugins: false,
         plugins: [
-          aspectRatioPlugin(),
+          aspectRatioPlugin,
         ],
       }, config)
     )
