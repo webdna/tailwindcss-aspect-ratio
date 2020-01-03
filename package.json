@@ -15,17 +15,20 @@
   "author": "webdna",
   "license": "MIT",
   "bugs": "https://github.com/webdna/tailwindcss-aspect-ratio/issues",
-  "homepage": "https://github.com/webdna/tailwindcss-aspect-ratio#readme",
+  "homepage": "https://github.com/webdna/tailwindcss-aspect-ratio",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "release": "f(){ release-it $1 && github-release-from-changelog ;};f"
   },
   "devDependencies": {
-    "jest": "^24.8.0",
-    "jest-matcher-css": "^1.0.3",
-    "postcss": "^7.0.16",
-    "tailwindcss": "^1.0.1"
+    "github-release-from-changelog": "^2.1.0",
+    "jest": "^24.9.0",
+    "jest-matcher-css": "^1.1.0",
+    "postcss": "^7.0.26",
+    "release-it": "^12.4.3",
+    "tailwindcss": "^1.2.0-canary.2"
   },
   "dependencies": {
-    "lodash": "^4.17.11"
+    "lodash": "^4.17.15"
   }
 }
