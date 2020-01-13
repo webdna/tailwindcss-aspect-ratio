@@ -8,7 +8,7 @@ module.exports = plugin(function({ theme, variants, e, addUtilities }) {
       return [
         `.${e(`aspect-ratio-${modifier}`)}`,
         {
-          paddingBottom: `${1 / aspectRatio * 100}%`,
+          paddingBottom: aspectRatio == 0 ? '0' : `${1 / aspectRatio * 100}%`,
         },
       ];
     })

@@ -49,17 +49,17 @@ test('ratios can be customized', () => {
   }).then(css => {
     expect(css).toMatchCss(`
       .aspect-ratio-2\\/1 {
-        padding-bottom: 50%
+        padding-bottom: 50%;
       }
       .aspect-ratio-16\\/9 {
-        padding-bottom: 56.25%
+        padding-bottom: 56.25%;
       }
       @media (min-width: 640px) {
         .sm\\:aspect-ratio-2\\/1 {
-          padding-bottom: 50%
+          padding-bottom: 50%;
         }
         .sm\\:aspect-ratio-16\\/9 {
-          padding-bottom: 56.25%
+          padding-bottom: 56.25%;
         }
       }
     `);
@@ -80,10 +80,29 @@ test('ratios can be arrays or fractions', () => {
   }).then(css => {
     expect(css).toMatchCss(`
       .aspect-ratio-5\\/2 {
-        padding-bottom: 40%
+        padding-bottom: 40%;
       }
       .aspect-ratio-16\\/9 {
-        padding-bottom: 56.25%
+        padding-bottom: 56.25%;
+      }
+    `);
+  });
+});
+
+test('ratio can be 0', () => {
+  return generatePluginCss({
+    theme: {
+      aspectRatio: {
+        'none': 0,
+      },
+    },
+    variants: {
+      aspectRatio: [],
+    },
+  }).then(css => {
+    expect(css).toMatchCss(`
+      .aspect-ratio-none {
+        padding-bottom: 0;
       }
     `);
   });
@@ -102,10 +121,10 @@ test('variants can be customized', () => {
   }).then(css => {
     expect(css).toMatchCss(`
       .aspect-ratio-2\\/1 {
-        padding-bottom: 50%
+        padding-bottom: 50%;
       }
       .hover\\:aspect-ratio-2\\/1:hover {
-        padding-bottom: 50%
+        padding-bottom: 50%;
       }
     `);
   });

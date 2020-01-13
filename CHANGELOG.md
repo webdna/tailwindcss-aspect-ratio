@@ -7,6 +7,9 @@ and this project mostly adheres to [Semantic Versioning](https://semver.org/spec
 
 ## [3.0.0] - XXXX-XX-XX
 
+### Added
+- A ratio of `0` is now valid (generates `padding-bottom: 0`)
+
 ### Changed
 - Changed to use Tailwind 1.2’s new plugin definition syntax
 

@@ -15,7 +15,8 @@ This plugin uses the `aspectRatio` key in your Tailwind config’s `theme` and `
 module.exports = {
   theme: {
     aspectRatio: { // defaults to {}
-      'square': [1, 1], // or simply 1
+      'none': 0,
+      'square': [1, 1], // or 1 / 1, or simply 1
       '16/9': [16, 9],  // or 16 / 9
       '4/3': [4, 3],    // or 4 / 3
       '21/9': [21, 9],  // or 21 / 9
@@ -30,22 +31,25 @@ module.exports = {
 };
 ```
 
-The `aspectRatio` theme object is a dictionary where the key is the suffix of the class name and the value is an array of width and height `[{width}, {height}]` or a number that represents a width / height ratio. The key doesn’t have to replicate the values, so if you prefer "nice names" you could have something like `'video': [16, 9]`.
+The `aspectRatio` theme object is a dictionary where the key is the suffix of the class name and the value is an array of width and height or a number that represents a width / height ratio. The key doesn’t have to replicate the values, so if you prefer "nice names" you could have something like `'video': [16, 9]`.
 
 The above configuration would create the following classes, as well as their responsive variants:
 
 ```css
+.aspect-ratio-none {
+  padding-bottom: 0;
+}
 .aspect-ratio-square {
-  padding-top: 100%;
+  padding-bottom: 100%;
 }
 .aspect-ratio-16\/9 {
-  padding-top: 56.25%;
+  padding-bottom: 56.25%;
 }
 .aspect-ratio-4\/3 {
-  padding-top: 75%;
+  padding-bottom: 75%;
 }
 .aspect-ratio-21\/9 {
-  padding-top: 42.86%;
+  padding-bottom: 42.86%;
 }
 ```
 
