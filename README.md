@@ -57,4 +57,22 @@ The above configuration would create the following classes, as well as their res
 }
 ```
 
-Note: The `/` character is escaped in CSS and turned into `\/`, but the actual class name you would use in your HTML is `aspect-ratio-16/9`.
+Which you can then use in your HTML like this:
+
+```html
+<div>
+  <div class="aspect-ratio-16/9"></div>
+  <img src="thumbnail.jpg" class="absolute left-0 top-0 w-full h-full object-cover">
+</div>
+```
+
+Or inside a `flex` container to behave like a “minimum aspect ratio” (if the content overflows, the container will grow instead of forcing the aspect ratio):
+
+```html
+<div class="flex bg-gray-300">
+  <div class="aspect-ratio-2/1"></div>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sed dictum sem. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Maecenas et lacus ut dolor rutrum dignissim.
+  </p>
+</div>
+```
