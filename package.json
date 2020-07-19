@@ -22,13 +22,13 @@
   },
   "devDependencies": {
     "github-release-from-changelog": "^2.1.1",
-    "jest": "^26.0.1",
+    "jest": "^26.1.0",
     "jest-matcher-css": "^1.1.0",
     "postcss": "^7.0.32",
-    "release-it": "^13.6.2",
-    "tailwindcss": "^1.4.6"
+    "release-it": "^13.6.5",
+    "tailwindcss": "^1.5.1"
   },
   "dependencies": {
-    "lodash": "^4.17.15"
+    "lodash": "^4.17.19"
   }
 }

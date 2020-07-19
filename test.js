@@ -34,7 +34,10 @@ expect.extend({
 
 test('there is no output by default', () => {
   return generatePluginCss().then(css => {
-    expect(css).toMatchCss(``);
+    expect(css).toMatchCss(`
+      @media (min-width: 640px) {
+      }
+    `);
   });
 });
 
