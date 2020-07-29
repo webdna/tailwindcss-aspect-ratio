@@ -60,7 +60,7 @@ The above configuration would create the following classes, as well as their res
 Which you can then use in your HTML like this:
 
 ```html
-<div>
+<div class="relative">
   <div class="aspect-ratio-16/9"></div>
   <img src="thumbnail.jpg" class="absolute left-0 top-0 w-full h-full object-cover">
 </div>
