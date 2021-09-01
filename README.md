@@ -1,3 +1,7 @@
+# ⛔️ DEPRECATED
+
+This plugin was created before the `aspect-ratio` property was supported by any browser. You should now use the official [`@tailwindcss/aspect-ratio`](https://github.com/tailwindlabs/tailwindcss-aspect-ratio) plugin.
+
 # Aspect Ratio Plugin for Tailwind CSS
 
 ## Requirements
